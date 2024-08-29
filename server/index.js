@@ -18,6 +18,8 @@ app.use("/", (req, res) => {
     res.send("Server is running.");
 });
 
+app.use(express.json());
+
 io.on('connection', (socket) => {
   console.log("User Online");
 
