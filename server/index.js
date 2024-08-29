@@ -8,21 +8,18 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: ['https://my-whiteboard-app-client.vercel.app', 'http://localhost:3000'], // Allow requests from this origin
-    methods: ["GET", "POST"]
+    methods: ["GET", "POST"],
+    credentials: true,
   }
 });
 
-const allowedOrigins = ['https://my-whiteboard-app-client.vercel.app',  'http://localhost:3000'];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-}));// Enable CORS for all routes
+app.use( 
+    cors({
+    origin: ['https://my-whiteboard-app-client.vercel.app', 'http://localhost:3000'], // Allow requests from this origin
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);// Enable CORS for all routes
 
 app.use("/", (req, res) => {
     res.send("Server is running.");
