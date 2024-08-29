@@ -18,7 +18,7 @@ class Container extends React.Component {
         };
 
         // Use environment variable or fallback to localhost
-        const serverUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:5000";
+        const serverUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:5000" || 'https://my-whiteboard-app-server.vercel.app/';
         this.socket = io.connect(serverUrl);
 
         this.socket.on('chat-message', (message) => {
