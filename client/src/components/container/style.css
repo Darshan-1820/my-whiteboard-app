@@ -1,0 +1,161 @@
+
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:  #1a548b;
+    display: flex;
+    
+}
+
+.drawing-area{
+    width: 80%;
+    height: 90%;
+    margin-top:2%;
+    /* margin-left: 2%; */
+    text-align:center;
+    
+}
+
+.color-picker-container {
+    font-family: monospace;
+    font-weight: 500;
+    font-size:17px;
+    display: block;
+    color: white;
+    display: inline;
+    border-right: dashed white;
+    padding-right: 2%;
+}
+
+.brushsize-container{
+    font-family: monospace;
+    font-weight: 500;
+    font-size:17px;
+    display: inline;
+    color: white;
+    margin-left: 20px;
+}
+
+/* .tools-section {
+    margin-top:2%;
+    margin-left: 3%;
+    text-align:center;
+} */
+
+
+.board-container {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 2%;
+    background: white;
+    border: solid black;
+}
+
+
+/* Updated for Eraser and Clear button */
+
+.button-group {
+    margin-top: 20px; /* Space above buttons */
+    text-align: center; /* Center the buttons */
+}
+
+.eraser-container,
+.clear-board-container {
+    display: inline-block;
+    margin: 0 15px; /* Space between buttons */
+}
+
+.eraser-container button,
+.clear-board-container button {
+    padding: 10px 20px; /* Padding inside buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.eraser-container button {
+    font-family: monospace;
+    font-weight: 500;
+    background-color: #f0f0f0; /* Light background for eraser button */
+    color: #333; /* Dark text color for contrast */
+}
+
+.clear-board-container button {
+    font-family: monospace;
+    font-weight: 500;
+    background-color: #e04040; /* Red background for clear board button */
+    color: white; /* White text color for contrast */
+}
+
+/* Chat Messages */
+
+/* .myChat{
+    width: auto;
+    height: 70%;
+    display: flex;
+    margin-top: 140px;
+    /* align-items: center;
+    justify-content:end; */
+    /* border: solid black; 
+} */
+
+.chat-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    margin-top: 64%;
+    /* background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+    #111111; */
+    padding: 10px;
+    /* border: solid black; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    
+}
+
+.chat-box {
+    flex: 1;
+    width: 100%; /* Take up full width of container */
+    max-height: 70vh; /* Limit the height of chat messages */
+    overflow-y: auto;
+    /* border:solid black; */
+}
+
+.chat-message {
+    padding: 5px 10px;
+    background: #ececec;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border:solid black;
+}
+
+/* Chat- Input Area */
+.chat-container textarea {
+    width: 100%; /* Full width */
+    height: 50px; /* Adjust height as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between input and button */
+    resize: none; /* Disable resizing */
+    box-sizing: border-box; /* Include padding and border in width */
+    border:solid black;
+    
+}
+
+
+/* Send Button */
+.chat-container button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border:solid black;
+}
