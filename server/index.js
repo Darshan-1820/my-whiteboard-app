@@ -12,7 +12,17 @@ const io = socketIo(server, {
   }
 });
 
-app.use(cors()); // Enable CORS for all routes
+const allowedOrigins = ['https://my-whiteboard-app-client.vercel.app'];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));// Enable CORS for all routes
 
 app.use("/", (req, res) => {
     res.send("Server is running.");
