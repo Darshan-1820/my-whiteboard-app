@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ["https://my-whiteboard-app-client.vercel.app", 'http://localhost:3000'], // Allow requests from this origin
+    origin: ['https://my-whiteboard-app-client.vercel.app/', 'http://localhost:3000'], // Allow requests from this origin
     methods: ["GET", "POST"]
   }
 });

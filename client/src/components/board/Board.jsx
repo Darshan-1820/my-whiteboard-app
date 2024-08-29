@@ -8,7 +8,7 @@ class Board extends React.Component {
 
 
     timeout;
-    socket = io.connect(process.env.REACT_APP_SERVER_URL || 'http://localhost:5000');
+    socket = io.connect(process.env.REACT_APP_SERVER_URL || 'https://my-whiteboard-app-server.vercel.app/');
 
     ctx;
     isDrawing = false;
