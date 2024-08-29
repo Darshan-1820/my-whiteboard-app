@@ -12,7 +12,7 @@ const io = socketIo(server, {
   }
 });
 
-const allowedOrigins = ['https://my-whiteboard-app-client.vercel.app'];
+const allowedOrigins = ['https://my-whiteboard-app-client.vercel.app',  'http://localhost:3000'];
 
 app.use(cors({
   origin: function (origin, callback) {
